@@ -1,0 +1,10 @@
+environment                   = "dev1"
+subscription_id               = "aaaaaaaa-bbbb-cccc-dddd-111111111111"
+postfix                       = "sgc-project-dev-germanywestcentral"
+resource_group_name           = "rg-sgc-project-dev-germanywestcentral"
+dns_zone_resource_group       = "rg-sgc-project-shared-germanywestcentral"
+dns_region                    = "de"
+private_dns_zone_name         = "project.cloud.siedle.com"
+location                      = "germanywestcentral"
+key_vault_name                = "kv-sgc-project-name"
+public_network_access_enabled = false

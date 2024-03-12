@@ -1,16 +1,16 @@
 terraform {
   required_providers {
-    random = {
-      source = "hashicorp/random"
-      version = "3.5.1"
+    azurerm = {
+      source  = "hashicorp/random"
+      version = "~> 3.90.0"
     }
   }
 }
 
-resource "random_pet" "bucket_prefix" {
-  length = 4
-}
-
-output "bucket_prefix" {
-    value = random_pet.bucket_prefix.id
+run "verify_keyvault" {
+  command = plan
+  assert {
+    condition     = azurerm.key_vault_name.this.id != ""
+    error_message = "Expected: Actual:"
+  }
 }
